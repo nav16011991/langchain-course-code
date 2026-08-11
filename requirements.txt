@@ -1,0 +1,12 @@
+openai
+python-dotenv
+pydantic-settings
+langchain-openai
+
+# For Ollama
+langchain-ollama
+
+
+# For Hugging Face
+langchain-huggingface 
+sentence-transformers
