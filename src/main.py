@@ -1,3 +1,15 @@
+from importlib.metadata import version
+
+
+core_version = version("langchain-core")
+lg_version = version("langgraph")
+from langchain_openai import ChatOpenAI
+
+
+print(f"langchain-core version: {core_version}")
+print(f"langgraph version: {lg_version}")
+
+
 ####################################################################################################
 # from llm.model_factory import ModelFactory
 
@@ -52,3 +64,6 @@ print(type(result))
 print(result)
 print(result.answer)
 print(result.confidence)
+
+
+

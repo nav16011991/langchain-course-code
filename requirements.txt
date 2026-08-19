@@ -1,6 +1,9 @@
 openai
 python-dotenv
 pydantic-settings
+langchain
+langchain-core
+langgraph
 langchain-openai
 
 # For Ollama
@@ -10,3 +13,4 @@ langchain-ollama
 # For Hugging Face
 langchain-huggingface 
 sentence-transformers
+

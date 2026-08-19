@@ -1,3 +1,4 @@
+from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -7,10 +8,10 @@ class Settings(BaseSettings):
     # LLM
     # -------------------------
 
-    LLM_PROVIDER: str = "ollama"
-    LLM_MODEL: str = "qwen3:8b"
-    LLM_BASE_URL: str = "http://localhost:11434/v1"
-    LLM_API_KEY: str = "ollama"
+    MODEL_PROVIDER: str = "ollama"
+    MODEL_NAME: str = "qwen3:8b"
+    MODEL_BASE_URL: str = "http://localhost:11434/v1"
+    MODEL_API_KEY: str = "ollama"
 
     # -------------------------
     # Embeddings
@@ -32,7 +33,7 @@ class Settings(BaseSettings):
     TIMEOUT: int = 60
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=str(Path(__file__).parent.parent.parent / ".env"),
         extra="ignore",
     )
 
