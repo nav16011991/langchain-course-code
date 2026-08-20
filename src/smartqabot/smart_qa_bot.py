@@ -7,6 +7,9 @@ from langsmith import traceable
 
 from llm.model_factory import ModelFactory
 from smartqabot.smart_qa_response import SmartQAResponse
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class SmartQABot:
     def __init__(
